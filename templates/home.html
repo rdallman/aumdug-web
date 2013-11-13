@@ -22,7 +22,7 @@
       <h1>Upcoming Events</h1>
     {{ range $index, $val := . }}
       <div class="item">
-        <h2 class="name">{{.Name}}</h2>
+        <a href="/events/{{ $val.Id.Hex }}"><h2 class="name">{{.Name}}</h2></a>
         <p>{{.Description}}</p>
       </div>
     {{ end }}
